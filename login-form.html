@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login-form.css">
+  <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Modal Login Form</title>
+</head>
+<body>
+  <div class="container-home">
+    <h2>Here's Login Form</h2>
+    <button class="main-btn">Click to log in</button>
+  </div>
+
+  <div class="modal">
+    <form class="modal-content" action="#" method="post"> 
+      <!-- there's also 'get': Never use GET to send sensitive data! (will be visible in the URL), GET is better for non-secure data, like query strings in Google  -->
+      <div class="img-container">
+        <span class="close" title="close modal">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </span>
+        <img src="avatar.png" alt="avatar" class="avatar">
+      </div>
+
+      <div class="container1">
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter username" name="username" required>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Your password must be at least 8 or more characters, and include at least one lowercase letter, one uppercase letter, and a number" required>
+        <button class="submit-btn" type="submit">Log in</button>
+        <label class="checkbox-label">
+          <input type="checkbox" name="remember-me" checked="checked">
+          Remember me
+        </label>
+      </div>
+      <div class="container2">
+        <button type="button" class="cancel-btn">
+          Cancel
+        </button>
+        <span class="password">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  <script src="login-form.js"></script>
+</body>
+</html>
